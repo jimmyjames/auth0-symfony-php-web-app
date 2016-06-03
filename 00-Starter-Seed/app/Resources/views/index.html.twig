@@ -1,0 +1,32 @@
+<html>
+<head><title>Symfony Auth0 Quickstart</title></head>
+<body>
+{% if app.user %}
+    Welcome, {{ app.user.username }}!<br/>
+    {{ dump(app.user) }}
+    <a href="{{ url('secured') }}">Protected route</a>
+    <a href="{{ logout_url("secured_area") }}">
+        <button>Logout</button>
+    </a>
+{% else %}
+    <h1>Symfony Auth0 Quickstart</h1>
+    <script src="https://cdn.auth0.com/js/lock-8.min.js"></script>
+    <script type="text/javascript">
+
+        var lock = new Auth0Lock('{{ AUTH0_CLIENT_ID }}', '{{ AUTH0_DOMAIN }}');
+
+
+        function signin() {
+            lock.show({
+                callbackURL: 'http://localhost:8000/auth0/callback'
+                , responseType: 'code'
+                , authParams: {
+                    scope: 'openid profile'
+                }
+            });
+        }
+    </script>
+    <button onclick="window.signin();">Login</button>
+{% endif %}
+</body>
+</html>
