@@ -17,7 +17,9 @@ AUTH0_CLIENT_ID=myCoolClientId
 AUTH0_DOMAIN=yourDomain.auth0.com
 ```
 
-Once you've set those 4 enviroment variables, install the dependencies by running the following command:
+After that replace stubs at `app/config/config.yml` file with your credentials.
+
+Once you've set those enviroment variables, install the dependencies by running the following command:
 
 ```
 composer install
