@@ -12,9 +12,9 @@ For that, create a new file with the following code and save it as `.env` file i
 
 ```
 # .env file
-AUTH0_CLIENT_SECRET=myCoolSecret
-AUTH0_CLIENT_ID=myCoolClientId
-AUTH0_DOMAIN=yourDomain.auth0.com
+AUTH0_CLIENT_SECRET=YOUR_CLIENT_SECRET
+AUTH0_CLIENT_ID=YOUR_CLIENT_ID
+AUTH0_DOMAIN=YOUR_DOMAIN
 ```
 
 After that replace stubs at `app/config/config.yml` file with your credentials.
