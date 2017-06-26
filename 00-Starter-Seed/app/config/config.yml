@@ -67,11 +67,11 @@ swiftmailer:
     spool:     { type: memory }
 
 hwi_oauth:
-    firewall_name: secured_area
+    firewall_names: [secured_area]
     resource_owners:
         auth0:
             type:                auth0
-            base_url:            {DOMAIN}
+            base_url:            https://{DOMAIN}
             client_id:           {CLIENT_ID}
             client_secret:       {CLIENT_SECRET}
             scope: "openid profile"
