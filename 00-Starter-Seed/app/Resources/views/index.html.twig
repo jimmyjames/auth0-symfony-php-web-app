@@ -10,22 +10,7 @@
     </a>
 {% else %}
     <h1>Symfony Auth0 Quickstart</h1>
-    <script src="https://cdn.auth0.com/js/auth0/8.7/auth0.min.js"></script>
-    <script type="text/javascript">
-        var webAuth = new auth0.WebAuth({
-            domain: '{{ AUTH0_DOMAIN }}',
-            clientID: '{{ AUTH0_CLIENT_ID }}',
-            redirectUri: 'http://localhost:8000/auth0/callback',
-            audience: `https://{{ AUTH0_DOMAIN }}/userinfo`,
-            responseType: 'code',
-            scope: 'openid profile'
-        });
-
-        function signin() {
-            webAuth.authorize();
-        }
-    </script>
-    <button onclick="window.signin();">Login</button>
+    <a href="/connect/auth0"><button>Login</button></a>
 {% endif %}
 </body>
 </html>
