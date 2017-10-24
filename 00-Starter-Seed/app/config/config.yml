@@ -70,8 +70,12 @@ hwi_oauth:
     firewall_names: [secured_area]
     resource_owners:
         auth0:
-            type:                auth0
-            base_url:            https://{DOMAIN}
+            type:                oauth2
+            class:               'AppBundle\Auth0ResourceOwner'
             client_id:           {CLIENT_ID}
             client_secret:       {CLIENT_SECRET}
+            redirect_uri:        {CALLBACK_URL}
+            base_url:            https://{DOMAIN}
+            options:
+                audience:        {AUDIENCE}
             scope: "openid profile"
