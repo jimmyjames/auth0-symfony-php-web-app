@@ -24,6 +24,12 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])
 $loader = require __DIR__.'/../app/autoload.php';
 Debug::enable();
 
+try {
+    (new \Symfony\Component\Dotenv\Dotenv())->load(__DIR__.'/../.env');
+} catch (\Symfony\Component\Dotenv\Exception\PathException $e){
+
+}
+
 $kernel = new AppKernel('dev', true);
 $kernel->loadClassCache();
 $request = Request::createFromGlobals();
