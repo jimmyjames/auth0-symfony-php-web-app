@@ -14,6 +14,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 RUN php composer.phar --no-plugins --no-scripts install
+RUN php composer.phar run-script build-params
 
 ADD . /home/app
 
