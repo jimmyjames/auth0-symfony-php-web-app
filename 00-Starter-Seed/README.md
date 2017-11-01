@@ -6,7 +6,7 @@ This is the seed project you need to use if you're going to create a Symfony app
 
 In order to run the example you need to have `composer` and `php` installed.
 
-You also need to set the ClientSecret, ClientId and Domain for your Auth0 app as environment variables with the following names respectively: `AUTH0_CLIENT_SECRET`,`AUTH0_CLIENT_ID` and `AUTH0_DOMAIN`.
+You also need to set the ClientSecret, ClientId, Domain and Audience for your Auth0 app as environment variables with the following names respectively: `AUTH0_CLIENT_SECRET`,`AUTH0_CLIENT_ID`, `AUTH0_DOMAIN` and `AUTH0_AUDIENCE`.
 
 For that, create a new file with the following code and save it as `.env` file in the directory and set the values like the following:
 
@@ -15,9 +15,10 @@ For that, create a new file with the following code and save it as `.env` file i
 AUTH0_CLIENT_SECRET=YOUR_CLIENT_SECRET
 AUTH0_CLIENT_ID=YOUR_CLIENT_ID
 AUTH0_DOMAIN=YOUR_DOMAIN
+AUTH0_AUDIENCE={API_AUDIENCE}
 ```
 
-After that replace stubs at `app/config/config.yml` file with your credentials.
+__Note:__ If you are not implementing any API, leave the `AUTH0_AUDIENCE` variable empty, will be set with `https://AUTH0_DOMAIN/userinfo`.
 
 Once you've set those enviroment variables, install the dependencies by running the following command:
 
@@ -32,6 +33,15 @@ php app/console server:run
 ```
 
 Try calling [http://localhost:8000/](http://localhost:8000/) 
+
+
+## Running the example with docker
+
+In order to run the example with docker you need to have `docker` installed.
+
+You also need to set the environment variables as explained [previously](#running-the-example).
+
+Execute in command line `sh exec.sh` to run the Docker in Linux, or `.\exec.ps1` to run the Docker in Windows.
 
 ## What is Auth0?
 
