@@ -7,9 +7,13 @@
         "psr-4": { "": "src/" },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
-        "php": ">=5.3.9",
-        "symfony/symfony": "2.8.*",
+        "php": "^7.0|^5.6",
+        "php-http/guzzle6-adapter": "^1.1",
+        "php-http/httplug-bundle": "^1.1",
+        "symfony/symfony": "^3.3",
         "doctrine/orm": "^2.4.8",
         "doctrine/doctrine-bundle": "~1.4",
         "symfony/swiftmailer-bundle": "~2.3",
@@ -17,8 +21,9 @@
         "sensio/distribution-bundle": "~5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
-        "hwi/oauth-bundle": "0.5.3",
-        "vlucas/phpdotenv": "^2.4"
+        "hwi/oauth-bundle": ">=0.6",
+        "symfony/web-server-bundle": "^3.3",
+        "symfony/dotenv": "^3.3"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
@@ -40,14 +45,12 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ],
+        "build-params": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
         ]
     },
-    "config": {
-        "bin-dir": "bin",
-        "platform": {
-            "php": "5.3.9"
-        }
-    },
+
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",

@@ -18,6 +18,13 @@ $loader->unregister();
 $apcLoader->register(true);
 */
 
+try {
+    (new \Symfony\Component\Dotenv\Dotenv())->load(__DIR__.'/../.env');
+} catch (\Symfony\Component\Dotenv\Exception\PathException $e){
+
+}
+//$kernel = new AppKernel('dev', true);
+
 $kernel = new AppKernel('prod', false);
 $kernel->loadClassCache();
 //$kernel = new AppCache($kernel);
