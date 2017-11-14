@@ -1,72 +1,68 @@
-Symfony Standard Edition
-========================
+# Auth0 + Symfony Seed
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
+This is the seed project you need to use if you're going to create a Symfony app that will use Auth0.
 
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
+## Running the example
 
-What's inside?
---------------
+In order to run the example you need to have `composer` and `php` installed.
 
-The Symfony Standard Edition is configured with the following defaults:
+You also need to set the ClientSecret, ClientId, Domain and Audience for your Auth0 app as environment variables with the following names respectively: `AUTH0_CLIENT_SECRET`,`AUTH0_CLIENT_ID`, `AUTH0_DOMAIN` and `AUTH0_AUDIENCE`.
 
-  * An AppBundle you can use to start coding;
+For that, create a new file with the following code and save it as `.env` file in the directory and set the values like the following:
 
-  * Twig as the only configured template engine;
+```
+# .env file
+AUTH0_CLIENT_SECRET=YOUR_CLIENT_SECRET
+AUTH0_CLIENT_ID=YOUR_CLIENT_ID
+AUTH0_DOMAIN=YOUR_DOMAIN
+AUTH0_AUDIENCE={API_AUDIENCE}
+```
 
-  * Doctrine ORM/DBAL;
+__Note:__ If you are not implementing any API, leave the `AUTH0_AUDIENCE` variable empty, will be set with `https://AUTH0_DOMAIN/userinfo`.
 
-  * Swiftmailer;
+Once you've set those enviroment variables, install the dependencies by running the following command:
 
-  * Annotations enabled for everything.
+```
+composer install
+```
 
-It comes pre-configured with the following bundles:
+Now you can use Apache or the built-in server:
 
-  * **FrameworkBundle** - The core Symfony framework bundle
+```
+php bin/console server:start
+```
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
+Try calling [http://127.0.0.1:8000/](http://127.0.0.1:8000/) 
 
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
 
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+## Running the example with docker
 
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
+In order to run the example with docker you need to have `docker` installed.
 
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
+You also need to set the environment variables as explained [previously](#running-the-example).
 
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
+Execute in command line `sh exec.sh` to run the Docker in Linux, or `.\exec.ps1` to run the Docker in Windows.
 
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
+## What is Auth0?
 
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
+Auth0 helps you to:
 
-  * [**SensioGeneratorBundle**][13] (in dev env) - Adds code generation
-    capabilities
+* Add authentication with [multiple authentication sources](https://docs.auth0.com/identityproviders), either social like **Google, Facebook, Microsoft Account, LinkedIn, GitHub, Twitter, Box, Salesforce, amont others**, or enterprise identity systems like **Windows Azure AD, Google Apps, Active Directory, ADFS or any SAML Identity Provider**.
+* Add authentication through more traditional **[username/password databases](https://docs.auth0.com/mysql-connection-tutorial)**.
+* Add support for **[linking different user accounts](https://docs.auth0.com/link-accounts)** with the same user.
+* Support for generating signed [Json Web Tokens](https://docs.auth0.com/jwt) to call your APIs and **flow the user identity** securely.
+* Analytics of how, when and where users are logging in.
+* Pull data from other sources and add it to the user profile, through [JavaScript rules](https://docs.auth0.com/rules).
 
-  * [**WebServerBundle**][14] (in dev env) - Adds commands for running applications
-    using the PHP built-in web server
+## Create a free account in Auth0
 
-  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
-    integration
+1. Go to [Auth0](https://auth0.com) and click Sign Up.
+2. Use Google, GitHub or Microsoft Account to login.
 
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
+## Author
 
-Enjoy!
+[Auth0](auth0.com)
 
-[1]:  https://symfony.com/doc/3.3/setup.html
-[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/3.3/doctrine.html
-[8]:  https://symfony.com/doc/3.3/templating.html
-[9]:  https://symfony.com/doc/3.3/security.html
-[10]: https://symfony.com/doc/3.3/email.html
-[11]: https://symfony.com/doc/3.3/logging.html
-[13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
-[14]: https://symfony.com/doc/current/setup/built_in_web_server.html
+## License
+
+This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more info.
