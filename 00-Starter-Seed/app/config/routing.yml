@@ -1,6 +1,6 @@
 app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+    resource: '@AppBundle/Controller/'
+    type: annotation
 
 hwi_oauth_redirect:
     resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
@@ -11,7 +11,7 @@ hwi_oauth_login:
     prefix:   /login
 
 auth0_login:
-    path: /auth0/callback
+    path:    /auth0/callback
 
 auth0_logout:
     path: /auth0/logout
