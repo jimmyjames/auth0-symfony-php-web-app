@@ -18,6 +18,6 @@ RUN php composer.phar run-script build-params
 
 ADD . /home/app
 
-CMD php bin/console server:run 0.0.0.0:8000
+CMD php bin/console server:run 0.0.0.0:3000
 
-EXPOSE 8000
+EXPOSE 3000

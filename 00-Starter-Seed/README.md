@@ -29,10 +29,10 @@ composer install
 Now you can use Apache or the built-in server:
 
 ```
-php bin/console server:start
+php bin/console server:start 3000
 ```
 
-Try calling [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+Try calling [http://localhost:3000/](http://localhost:3000/)
 
 
 ## Running the example with docker
@@ -61,7 +61,7 @@ Auth0 helps you to:
 
 ## Author
 
-[Auth0](auth0.com)
+[Auth0](https://auth0.com)
 
 ## License
 
