@@ -39,7 +39,10 @@ class Auth0ResourceOwner extends GenericOAuth2ResourceOwner
         parent::configureOptions($resolver);
 
         $dotenv = new Dotenv();
-        $dotenv->load(__DIR__ . '/../../.env');
+
+        if (!getenv('AUTH0_DOMAIN')) {
+            $dotenv->load(__DIR__ . '/../../.env');
+        }
 
         $resolver->setDefaults(array(
             'authorization_url' => '{base_url}/authorize',
