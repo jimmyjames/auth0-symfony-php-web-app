@@ -20,7 +20,7 @@ AUTH0_AUDIENCE={API_AUDIENCE}
 
 __Note:__ If you are not implementing any API, leave the `AUTH0_AUDIENCE` variable empty, will be set with `https://AUTH0_DOMAIN/userinfo`.
 
-Once you've set those enviroment variables, install the dependencies by running the following command:
+Once you've set those environment variables, install the dependencies by running the following command:
 
 ```
 composer install
@@ -29,10 +29,10 @@ composer install
 Now you can use Apache or the built-in server:
 
 ```
-php app/console server:run 3000
+php bin/console server:start 3000
 ```
 
-Try calling [http://localhost:3000/](http://localhost:3000/) 
+Try calling [http://localhost:3000/](http://localhost:3000/)
 
 
 ## Running the example with docker
@@ -47,7 +47,7 @@ Execute in command line `sh exec.sh` to run the Docker in Linux, or `.\exec.ps1`
 
 Auth0 helps you to:
 
-* Add authentication with [multiple authentication sources](https://docs.auth0.com/identityproviders), either social like **Google, Facebook, Microsoft Account, LinkedIn, GitHub, Twitter, Box, Salesforce, amont others**, or enterprise identity systems like **Windows Azure AD, Google Apps, Active Directory, ADFS or any SAML Identity Provider**.
+* Add authentication with [multiple authentication sources](https://docs.auth0.com/identityproviders), either social like **Google, Facebook, Microsoft Account, LinkedIn, GitHub, Twitter, Box, Salesforce, among others**, or enterprise identity systems like **Windows Azure AD, Google Apps, Active Directory, ADFS or any SAML Identity Provider**.
 * Add authentication through more traditional **[username/password databases](https://docs.auth0.com/mysql-connection-tutorial)**.
 * Add support for **[linking different user accounts](https://docs.auth0.com/link-accounts)** with the same user.
 * Support for generating signed [Json Web Tokens](https://docs.auth0.com/jwt) to call your APIs and **flow the user identity** securely.
