@@ -5,11 +5,11 @@
         Welcome, {{ app.user.username }}!<br/>
         {{ dump(app.user) }}
         <a href="{{ url('secured_index') }}">Protected route</a>
-        <a href="{{ logout_url("secured_area") }}">
+        <a href="{{ logout_url("secured_area") }}" id="qsLogoutBtn">
             <button>Logout</button>
         </a>
     {% else %}
         <h1>Symfony Auth0 Quickstart</h1>
-        <a href="/connect/auth0"><button>Login</button></a>
+        <a href="/connect/auth0" id="qsLoginBtn"><button>Login</button></a>
     {% endif %}
 {% endblock %}
