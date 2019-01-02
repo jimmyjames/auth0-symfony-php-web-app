@@ -1,3 +1,5 @@
+# Issue Report
+
 If you are reporting a bug, please fill the sections below (if they are applicable), otherwise feel free to delete those that don't apply. Thank you! 🙏🏼
 
 ### Description
