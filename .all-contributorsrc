@@ -14,6 +14,16 @@
         "review",
         "maintenance"
       ]
+    },
+    {
+      "login": "joshcanhelp",
+      "name": "Josh Cunningham",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/855223?v=4",
+      "profile": "https://www.joshcanhelp.com",
+      "contributions": [
+        "code",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
