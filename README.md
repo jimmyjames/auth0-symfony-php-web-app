@@ -1,5 +1,5 @@
 # Auth0 Symfony PHP Web App
-[![CircleCI](https://circleci.com/gh/auth0-community/auth0-symfony-php-web-app.svg?style=svg)][![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)(https://circleci.com/gh/auth0-community/auth0-symfony-php-web-app)<img src="https://img.shields.io/badge/community-driven-brightgreen.svg"/> <br>
+[![CircleCI](https://circleci.com/gh/auth0-community/auth0-symfony-php-web-app.svg?style=svg)(https://circleci.com/gh/auth0-community/auth0-symfony-php-web-app)[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)<img src="https://img.shields.io/badge/community-driven-brightgreen.svg"/> <br>
 
 ### Contributors
 
